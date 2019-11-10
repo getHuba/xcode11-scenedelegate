@@ -26,6 +26,7 @@
 
 -(void)viewDidAppear:(BOOL)animated
 {
+//    在控制器没有加载完成前，使用presentViewController方法，如果写在viewDidLoad方法里，会报Presenting view controllers on detached view controllers is discouraged或whose view is not in the window hierarchy
    SecondViewController *control = [[SecondViewController alloc]init];
    [self presentViewController:control animated:YES completion:nil];
 }
